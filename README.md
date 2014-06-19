@@ -27,6 +27,6 @@ require_once('/path/to/services/sumo-php/Sumotext.php');
 
 Example usage
 ```php
-echo Sumotext::carrierCodeLookup('5012589948', '74700');
+echo Sumotext::carrierCodeLookup($mobile, $shortcode);
 ```
 which prints `7A2D2AF7-6851-4D22-BD41-BD8EE94C061E:TRUE:Message successfully delivered to handset.`
