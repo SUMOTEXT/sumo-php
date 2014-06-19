@@ -12,9 +12,18 @@ This package contains one file, Sumotext.php. Run `require_once` to include this
 ```php
 require_once('/path/to/services/sumo-php/Sumotext.php');
 ```
+###Example
+```php
+<?php
+	require_once('/path/to/services/sumo-php/Sumotext.php');
+	echo Sumotext::carrierCodeLookup($mobile, $shortcode);
+	echo sendMt($mobile, $carrier, $shortcode, $key, $msg);
+	echo Sumotext::deliveryReport($smsid, $shortcode);
+?>
+```
 ###Methods
 
-####`carrierCodeLookup($mobile, $shortcode)`
+`carrierCodeLookup($mobile, $shortcode)`
 
 Example usage
 ```php
