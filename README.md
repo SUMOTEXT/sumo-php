@@ -17,13 +17,13 @@ require_once('/path/to/services/sumo-php/Sumotext.php');
 <?php
 	require_once('/path/to/services/sumo-php/Sumotext.php');
 	echo Sumotext::carrierCodeLookup($mobile, $shortcode);
-	echo sendMt($mobile, $carrier, $shortcode, $key, $msg);
+	echo Sumotext::sendMt($mobile, $carrier, $shortcode, $key, $msg);
 	echo Sumotext::deliveryReport($smsid, $shortcode);
 ?>
 ```
 ###Methods
 
-`carrierCodeLookup($mobile, $shortcode)`
+#####`carrierCodeLookup($mobile, $shortcode)`
 
 Example usage
 ```php
