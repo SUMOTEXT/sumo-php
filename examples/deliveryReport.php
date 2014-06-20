@@ -1,5 +1,5 @@
 <?php
-	require_once('/path/to/Sumotext.php');
+	require_once('/path/to/Sumotext.php'); //exposes Sumotext:: helper class
 
 	$delivery_report = Sumotext::deliveryReport('{smsid}', '{shortcode}');
 
