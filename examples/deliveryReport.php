@@ -1,4 +1,9 @@
-require_once('/path/to/Sumotext.php');
+<?php
+	require_once('/path/to/Sumotext.php');
 
-Sumotext::deliveryReport('{smsid}', '{shortcode}');
+	$delivery_report = Sumotext::deliveryReport('{smsid}', '{shortcode}');
 
+	echo $delivery_report->message;
+	echo $delivery_report->sent;
+	echo $delivery_report->message;
+?>

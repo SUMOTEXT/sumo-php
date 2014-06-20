@@ -10,8 +10,11 @@
 		public static function sendMt($mobile, $carrier, $shortcode, $key, $msg)
 		{
 			$end = "mobile=" . $mobile . "&carrier=" . $carrier . "&shortcode=" . $shortcode . "&key=" . $key . "&msg=" . $msg;
-			return file_get_contents("https://mosms.sumotext.com/secure/sumoSend.aspx?" . $end);
-			
+			$raw = file_get_contents("https://mosms.sumotext.com/secure/sumoSend.aspx?" . $end);
+			$obj = new StdClass();
+			$pieces = explode(":", $raw);
+			$obj->mobile = $pieces[0];
+			$obj->smsid = $pieces[1];
 		}
 
 		public static function deliveryReport($smsid, $shortcode)
